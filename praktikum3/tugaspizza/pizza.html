@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan Pizza</title>
+</head>
+<body>
+    <center>
+    <div style="height:830px ; width:450px ;border:1px solid ;box-shadow: 1px 1px 4px 4px #aaeeee	;padding-left: 15px;padding-right: 15px; ">
+        <h3 align="left">Black Goose Bistro | Pizza-on-Demand</h3>
+        <p align="left">Our 12" wood-fired pizzas are available for delivery. Build your custom pizza and we'll deliver it within an hour.</p>
+
+        <!-- your information (form) -->
+        <form action="http://blackgoosebistro.com/pizza.php" method="post">
+            <table align="left">
+                <tr>
+                    <td colspan="3">Your Information</td>
+                </tr>
+                <tr>
+                    <td width="150px"><label for="name">Name</label></td>
+                    <td>:</td>
+                    <td width="300px"><input type="text" name="customername" id="name"></td>
+                </tr>
+                <tr>
+                    <td width="150px"><label for="address"> Address</label></td>
+                    <td>:</td>
+                    <td><input type="text" name="address" id="address"></td>
+                </tr>
+                <tr>
+                    <td width="150px"><label for="telephone"> Telephone Number</label></td>
+                    <td>:</td>
+                    <td><input type="tel" name="telephone" id="telephone"></td>
+                </tr>
+                <tr>
+                    <td width="150px"><label for="email">email</label></td>
+                    <td>:</td>
+                    <td><input type="email" name="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td width="150px"><label for="delivery"> Delivery Instructions</label></td>
+                    <td>:</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="padding-bottom: 10px;"><textarea name="instructions" id="delivery" cols="55" rows="5" maxlength="400"></textarea></td>
+                </tr>
+            </table>
+
+            <p align="left"> <b>Design Your Dream Pizza:</b> <br> Pizza Specs</p>
+
+            <!-- crust-->
+            <table align="left">
+                <tr>
+                    <td width="450px">Crust (Choose One) :</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 15px;">
+                        <input type="radio" name="crust" id="classicwhite" value="classic white"><label for="classicwhite"> Classic White</label> <br>
+                        <input type="radio" name="crust" id="Multigrain" value="multigrain"><label for="Multigrain"> Multigrain</label> <br>
+                        <input type="radio" name="crust" id="cheesestuffedcrust" value="cheese-stuffed crust"><label for="cheesestuffedcrust"> Cheese-stuffed Crust </label><br>
+                        <input type="radio" name="crust" id="Glutenfree" value="gluten-free"><label for="Glutenfree"> Gluten-free</label>
+                    </td>
+                </tr>
+
+                <!-- topping -->
+                <tr>
+                    <td>Toppings (Choose as many as you want) :</td>
+                </tr>
+                <tr>
+                    <td style="padding-left: 15px; padding-bottom: 15px;">
+                        <input type="checkbox" name="toppings[]" id="redsauce" checked value="red sauce"> <label for="redsauce">Red Sauce</label> <br>
+                        <input type="checkbox" name="toppings[]" id="whitesauce" value="white sauce"><label for="whitesauce">White Sauce</label> <br>
+                        <input type="checkbox" name="toppings[]" id="mozzarellacheese" value="mozzarella"><label for="mozzarellacheese"> Mozzarella cheese</label> <br>
+                        <input type="checkbox" name="toppings[]" id="pepperoni" value="pepperoni"><label for="pepperoni">Pepperoni</label>  <br>
+                        <input type="checkbox" name="toppings[]" id="mushrooms" value="mushrooms"><label for="mushrooms">Mushrooms</label> <br>
+                        <input type="checkbox" name="toppings[]" id="peppers" value="peppers"><label for="peppers">Peppers</label> <br>
+                        <input type="checkbox" name="toppings[]" id="anchovies" value="anchovies"><label for="anchovies">Anchovies</label>
+                    </td>
+                </tr>
+            </table>
+            <p align="left">Number <br> <label for="choose"> How many Pizzas: </label>
+                
+             <select name="pizzas" id="choose">
+                <option value="1">1
+                <option value="2">2
+                <option value="3">3
+                <option value="4">4
+                <option value="5">5
+                <option value="6">6
+            </select>
+            </p>
+
+            <p align="left"><input type="submit" value="Bring me a pizza!"> <input type="reset" value="Reset"></p>
+        </form>
+    </div>
+    </center>
+</body>
+</html>
