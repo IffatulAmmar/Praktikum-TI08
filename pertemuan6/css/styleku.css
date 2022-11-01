@@ -1,0 +1,55 @@
+#header{
+    background-color: goldenrod;
+    padding: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color:antiquewhite;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    color: blue;
+    text-align: center;
+}
+
+blockquote{
+    background-color: gold;
+    border: 2px dotted black;
+    text-align: center;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.menu{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: fit-content;
+}
+
+.menu ul{
+    display: flex;
+    list-style-type: none;
+}
+
+.menu li{
+    margin-left: 5px;
+}
+
+.gambar{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.gambar img{
+    width: 200px;
+}
+
+.big{
+    font-size:50px;
+    color: blue;
+}
