@@ -1,0 +1,50 @@
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.topbox {
+    height: 100px;
+}
+
+.yellow{
+    width: 20%;
+    background-color: yellow;
+}
+
+.orange{
+    width: 79%;
+    background-color: orangered;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+
+.mainbox{
+    height: 500px;
+}
+
+.green{
+    width: 20%;
+    background-color: greenyellow;
+}
+
+.grey{
+    width: 58%;
+    background-color: lightgrey;
+}
+
+.lightblue{
+    width: 20%;
+    background-color: lightskyblue;
+}
+
+.bottom{
+    width: 100%;
+    height: 100px;
+    background-color: blue;
+    margin-top: 1%;
+}
