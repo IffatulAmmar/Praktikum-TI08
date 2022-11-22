@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-grow: 1;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+nav {
+    background-color: pink;
+    width: 20vw;
+    
+}
+
+header, footer {
+    background-color: khaki;
+    height: 20vh;
+}
+
+article {
+    flex-grow: 1;
+}
+
+aside {
+    background-color: cyan;
+    width: 20vw;
+}
