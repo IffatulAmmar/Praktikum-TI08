@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color:brown;
+}
+
+header, footer {
+    background-color: greenyellow;
+    height: 15vh;
+    margin: 2vh;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-grow: 1;
+}
+
+aside {
+    width: 20vw;
+    background-color: green;
+    margin-left: 2vh;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: beige;
+    margin: 0 2vh;
+}
+
+.image {
+    display: flex;
+}
+
+.image div {
+    height: 20vh;
+    background-color: grey;
+    flex-grow: 1;
+    margin: 3vw;
+    text-align: center;
+}
+
+article {
+    flex-grow: 1;
+    text-align: center;
+
+}
