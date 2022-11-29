@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Penjumlahan</title>
+</head>
+<body>
+    <h1>Program Penjumlahan</h1>
+    <input type="number" id="bil_1">
+    <p>+</p>
+    <input type="number" id="bil_2" onchange="hitungJumlah()">
+    <p>=</p>
+    <div style="height: auto; width: 170px; border : 1px solid; padding : 1px 3px;"><span id="hasil">0</span></div>
+
+    <script>
+        function hitungJumlah(){
+            let bil_1 = document.getElementById('bil_1').value;
+            let bil_2 = document.getElementById('bil_2').value;
+            let hasil = document.getElementById('hasil');
+
+            let Penjumlahan = parseInt(bil_1) + parseInt(bil_2);
+
+            hasil.innerHTML = Penjumlahan
+        }
+    </script>
+
+</body>
+</html>
