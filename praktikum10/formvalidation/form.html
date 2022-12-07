@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form onsubmit="return false">
+        <h1>Form Validation</h1>
+        <label for="nama">Nama Pelanggan : </label>
+        <input type="text" id="nama" placeholder="Nama Anda" maxlength="30" required/><span id="errornama"></span><br>
+    
+        <label for="email">Email : </label>
+        <input type="email" id="email" placeholder="Email Anda" required><span id="erroremail"></span><br>
+    
+        <label for="jam">Jam Keberangkatan : </label>
+        <input type="time" id="jam" required><span id="errorjam"></span><br>
+    
+        <label for="tujuan">Tujuan Keberangkatan : </label>
+        <input type="text" id="tujuan" placeholder="Tujuan" required><span id="errortujuan"></span><br>
+    
+        <label for="tiket">Jumlah Tiket : </label>
+        <select id="tiket" required>
+            <option value="">how much</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select><span id="errortiket"></span><br>
+    
+        <button onclick="formvalidation()">Submit</button>
+        <button onClick="window.location.reload();">Refresh Page</button>    </form>
+    <div>
+        <h1 id="hasil" style="text-decoration: underline;"></h1>
+        <p id="hasilnama"></p>
+        <p id="hasilemail"></p>
+        <p id="hasiljam"></p>
+        <p id="hasiltujuan"></p>
+        <p id="hasiltiket"></p>
+    </div>
+
+    <script>
+        function formvalidation() {
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jam = document.getElementById('jam').value;
+            let tujuan = document.getElementById('tujuan').value;
+            let tiket = document.getElementById('tiket').value;
+
+            if (nama == ''){
+                document.getElementById('errornama').innerHTML = ' ISI NAMA!';
+                document.getElementById('errornama').style = 'color:red';
+            }
+
+            if (email == ''){
+                document.getElementById('erroremail').innerHTML = ' ISI EMAIL!';
+                document.getElementById('erroremail').style = 'color:red';
+            }
+
+            if (jam == ''){
+                document.getElementById('errorjam').innerHTML = ' ISI JAM!';
+                document.getElementById('errorjam').style = 'color:red';
+            }
+
+            if (tujuan == ''){
+                document.getElementById('errortujuan').innerHTML = ' ISI TUJUAN!';
+                document.getElementById('errortujuan').style = 'color:red';
+            }
+
+            if (tiket == ''){
+                document.getElementById('errortiket').innerHTML = ' ISI JUMLAH TIKET!';
+                document.getElementById('errortiket').style = 'color:red';
+            }
+
+            else{
+                document.getElementById('hasil').innerHTML = "hasil validasi";
+                document.getElementById('hasilnama').innerHTML = "Nama Pelanggan : "+nama;
+                document.getElementById('hasilemail').innerHTML = "Emial Pelanggan : "+email;
+                document.getElementById('hasiljam').innerHTML = "Jam : "+jam;
+                document.getElementById('hasiltujuan').innerHTML = "Tujuan : "+tujuan;
+                document.getElementById('hasiltiket').innerHTML = "Jumlah Tiket : "+tiket;
+            }
+            
+
+        }
+    </script>
+</body>
+</html>
