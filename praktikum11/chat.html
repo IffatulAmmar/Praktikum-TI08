@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat message</title>
+</head>
+<body style="height: 2000px;">
+    
+    <div style="border: 2px solid; 
+    height: 200px;
+    width: 300px ; 
+    position: fixed; 
+    right: 2vw;
+    bottom: 2vh; 
+    z-index: 1; 
+    background-color: whitesmoke; 
+    opacity: 80%; 
+    border-radius:10PX; 
+    display: flex; 
+    flex-direction: column;
+    min-height: 30vh;">
+
+        <div style="width: 100%; 
+        text-align: center; 
+        padding: 3% 0; 
+        background-color: rgb(135, 169, 169); 
+        border-top-left-radius:10px; 
+        border-top-right-radius:10px;">
+            Kotak Pesan
+        </div>
+
+        <div id="container" style="flex-grow: 1; 
+        display: flex; 
+        flex-direction: column;
+        max-height: 30vh;">
+
+            <span style="flex-grow: 1;"></span>
+
+            <div id="tampilan" style="background-color: rgb(169, 176, 176); 
+            margin: 1%; 
+            padding: 2%; 
+            border-radius: 5px;">
+                ada yang bisa kami bantu ?
+            </div>
+
+        </div>
+
+        <div style="display: flex; padding: 2%;">
+            <label for="pesan" style="flex-grow:1;">
+                <input id="pesan" type="text" placeholder="masukan pesan anda !" style=" padding: 2%; border-radius: 7px; width: 90%;">
+            </label>
+
+            <button style="padding: 1%;" onclick="chat()">
+                <img src="send.png" alt="" style="width: 17px;">
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+        function chat(){
+            let box = document.querySelector('#container');
+            let message = document.querySelector('#pesan').value;
+
+            if (message != ""){
+                box.innerHTML += `<div id="tampilan" 
+            style="background-color: rgb(171, 239, 239); 
+            margin: 1%; 
+            padding: 2%; 
+            border-radius: 5px;
+            text-align: right;">` + message.trim() + `</div>`;
+                
+                pesan.value = "";
+                pesan.focus();
+
+            }
+        }
+    </script>
+</body>
+</html>
